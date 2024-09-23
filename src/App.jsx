@@ -1,17 +1,17 @@
+// App.jsx
 import './App.css';
-import UseState from './UseState';
-// import CountUseState from './CountUseState';
-import UseeffTuts from './UseeffTuts';
-import WithEventTuts from './WithEventTuts';
-function App() {
+import FunctionContextComponent from './FunctionContextComponents';
+import ClassContextComponent from './ClassContextComponent';
+import ThemeProvider from './ThemeContext'; // Correct import for ThemeProvider
+// No need to import ThemeContext here unless required for specific use
+
+export default function App() {
   return (
-   <>
-    {/* <UseState/> */}
-    {/* <CountUseState></CountUseState> */}
-{/* <WithEventTuts></WithEventTuts> */}
-    <UseeffTuts></UseeffTuts>
-   </>
+    <>
+      <ThemeProvider>
+        <FunctionContextComponent />
+        {/* <ClassContextComponent /> */}
+      </ThemeProvider>
+    </>
   );
 }
-
-export default App;
